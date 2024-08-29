@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist List</title>
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+<body>
+    <div class="global">
+        {{range .}}
+        <div class="box">
+            <div class="image" style="background-image: url('{{.Image}}');"></div>
+            <a href="/artists/{{.ID}}"><button>{{.Name}}</button></a>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
