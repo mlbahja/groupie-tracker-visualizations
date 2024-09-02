@@ -61,7 +61,7 @@ func PageHandler(w http.ResponseWriter, r *http.Request) {
 	// Render template with data
 	tmpl, err := template.ParseFiles("templates/result.html")
 	if err != nil {
-		errorPages(w, 500)
+		errorPages(w, 500)	
 		return
 	}
 	if err := tmpl.Execute(w, ApiData); err != nil {
